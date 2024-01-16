@@ -9,7 +9,7 @@ type Props = {
   description: string,
 }
 
-export default function FeatureCard({ children, title, feature, description }: Props) {
+export default function FeatureCard({ children, title, feature, description }: Readonly<Props>) {
   return (
     <li className="flex gap-8">
       <div className="w-1/2">
@@ -28,14 +28,13 @@ export default function FeatureCard({ children, title, feature, description }: P
           <div className="flex gap-3">
             <Button type="primary">Start a project</Button>
             <Button type="secondary">
-              <img src="/icon/book.svg" alt="" />
-              See documentation
+              <img src="/icon/book.svg" alt="" /> See documentation
             </Button>
           </div>
         </div>
       </div>
 
-      <div className="relative">{children}</div>
+      <div className="relative w-1/2">{children}</div>
     </li>
   )
 }

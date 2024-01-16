@@ -10,11 +10,13 @@ export default function Table() {
   ]
   
   return (
-    <table className="w-[115%] border-[1px] border-zinc-500">
+    <table className="w-full border-[1px] border-zinc-500">
       <thead className="text-sm font-normal text-zinc-600">
-        <th className="px-3 py-4 border-[1px] border-collapse">Name</th>
-        <th className="px-3 py-4 border-[1px] border-collapse">UUID</th>
-        <th className="px-3 py-4 border-[1px] border-collapse">Role</th>
+        <tr>
+          <th className="px-3 py-4 border-[1px] border-collapse">Name</th>
+          <th className="px-3 py-4 border-[1px] border-collapse">UUID</th>
+          <th className="px-3 py-4 border-[1px] border-collapse">Role</th>
+        </tr>
       </thead>
       <tbody className="text-xs bg-white">
         {tableData.map(({ nama, UUID, role }) => (
